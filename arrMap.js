@@ -1,5 +1,5 @@
-// Tạo mảng sản phẩm có id, name, price, quantity.
-let products = [
+//Tạo mảng sản phẩm có id, name, price, quantity.
+let productList = [
     {
         id: 1,
         name: 'Product01',
@@ -20,22 +20,22 @@ let products = [
     }
 ]
 // 1. Sử dung map, in ra name và price cua cac sản phẩm
-products.map(prodtuc=>{
+productList.map(prodtuc=>{
     console.log(`Product name: ${prodtuc.name} - Price ${prodtuc.price}`)
 })
 // 2. Sử dụng map, tìm ra các  sản phẩm có giá > 100
-products.map(product=>{
+productList.map(product=>{
     if(product.price > 100 ){
         console.log(product.name);
     }
 })
 // 3. Sử dụng filter, tìm ra các  sản phẩm có giá > 100
-products.filter(product=>{
+productList.filter(product=>{
     if(product.price > 100 ){
         console.log(product.name);
     }
 })
 // 4. Sử dụng map, tính tổng tiền hàng sẽ có nếu bán hết toàn bộ sản phẩm (tổng giá*số lượng)
 let priceTotal = 0;
-products.map(product=>priceTotal +=product.qty*product.price)
+productList.map(product=> priceTotal +=product.qty*product.price)
 console.log(priceTotal);

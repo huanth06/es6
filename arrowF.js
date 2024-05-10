@@ -35,14 +35,14 @@ arr.filter(item=>{
     }
 });
 // 4. Sử dụng map, tính tổng các phần tử * 2
-let t =0;
+let t2 =0;
 arr.map(item=>{
-    t += item*2;
+    t2 += item*2;
 });
-console.log(t);
+console.log(t2);
 // 5. Sử dụng reduce, tính tổng các phần tử * 2
-let t =arr.reduce((accumulation,currentValue)=>accumulation + currentValue*2,0);
-console.log(t);
+let t3 =arr.reduce((accumulation,currentValue)=>accumulation + currentValue*2,0);
+console.log(t3);
 // 1. Viết 1 arrow function nhận vào 1 số, trả về true nếu số nguyên tố, false nếu không nguyên tố
 let f11 = (x)=>{
     let flag = true;

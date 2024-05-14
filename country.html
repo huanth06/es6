@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{border: 1px solid #000; width: 320px;}
+        table tr td {
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
+</head>
+<body>
+    <h1 id="heading">Hello Guys</h1>
+    <div id="testNode"></div>
+    <!--<script src="./arrowF.js"></script>
+    <script src="./arrMap.js"></script>
+    <script src="./arrReduce.js"></script>-->
+    <!--<script src="./callback.js"></script>-->
+    <!--<script src="./classes.js"></script>
+    <script src="./obj.js"></script>-->
+    <!--<script src="./destructuring.js"></script>
+    <script src="./spread.js"></script>
+    <script src="./json.js"></script>
+    <script src="./promise.js"></script>
+    <script src="./ajax.js"></script>-->
+    
+    <script>
+        axios.get('https://restcountries.com/v3.1/all?fields=name,flags').then((res)=>{
+            let list = res.data;
+            let arrLength = list.length;
+            let html = '<table border="1px" width="400px">'
+            for (let index = 0; index < arrLength; index++) {
+                if(list[index].name.common.indexOf('V') != -1 || list[index].name.common.indexOf('v') != -1){
+                    html += '<tr><td>'+list[index].name.common+'</td><td><img src="'+list[index].flags.png+
+                            '" alt="'+list[index].name.common+' Logo" style="max-width: 150px" /></td></tr>';
+                }
+            }
+            html += '</table>';
+            document.write(html);
+        });
+    </script>
+</body>
+</html>

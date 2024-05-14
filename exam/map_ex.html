@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{border: 1px solid #000; width: 320px;}
+        table tr td {
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
+</head>
+<body>
+    <h1 id="heading">Hello Guys</h1>
+    <div id="testNode"></div>
+    <!--<script src="./arrowF.js"></script>
+    <script src="./arrMap.js"></script>
+    <script src="./arrReduce.js"></script>-->
+    <!--<script src="./callback.js"></script>-->
+    <!--<script src="./classes.js"></script>
+    <script src="./obj.js"></script>-->
+    <!--<script src="./destructuring.js"></script>
+    <script src="./spread.js"></script>
+    <script src="./json.js"></script>
+    <script src="./promise.js"></script>
+    <script src="./ajax.js"></script>-->
+    
+    <script>
+        const birds = [
+                {"ID": "DV8", "Name": "Eurasian Collared-Dove", "Type": "Dove" },
+                {"ID": "HK12", "Name": "Bald Eagle", "Type": "Hawk" },
+                {"ID": "HK6", "Name": "Cooper's Hawk", "Type": "Hawk" },
+                {"ID": "SP11", "Name": "Bell's Sparrow", "Type": "Sparrow" },
+                {"ID": "DV2", "Name": "Mourning Dove", "Type": "Dove" }
+        ];
+        birds.map(bird=>{console.log(bird.ID);});
+    </script>
+</body>
+</html>

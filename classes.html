@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class thongTin{
+            constructor(_ten,_mota){
+                this.ten=_ten;
+                this.mota=_mota;
+            }
+            setRong(x=1){
+                return x*3;
+            }
+        }
+        class hinhHoc extends thongTin{
+            constructor(_ten,_mota,_dai,_mota2){
+                super(_ten,_mota);
+                this.dai= _dai;
+                this.mota2=_mota2;
+            }
+            chuVi(x){
+                let cV =  (this.dai+x)*2;
+                return cV;
+            }
+        }
+        const hinhChuNhat = [
+            new hinhHoc('Hinh Chu Nhat 1','Chieu dai gap 2 lan chieu rong',6,'Chu vi hinh chu nhat'),
+            new hinhHoc('Hinh Chu Nhat 2','Chieu dai gap 3 lan chieu rong',9,'Chu vi hinh chu nhat')
+        ]
+        let devSoftware = hinhChuNhat =>{
+            hinhChuNhat.map((item)=>{
+                console.log(`${item.ten}`);
+                let rong = item.setRong(1);
+                console.log(`Chieu rong: ${rong}`);
+                console.log(`${item.mota} : ${item.dai}`);
+                console.log(`${item.mota2}: ${item.chuVi(rong)}`);
+                console.log('////////////////////////////////////');
+            });
+        }
+        devSoftware(hinhChuNhat);
+    </script>
+</body>
+</html>

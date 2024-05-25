@@ -19,16 +19,10 @@
             setName(name){
                 this.name = name;
             }
+            walk(){
+                document.write(`${this.name} moving. <br>`);
+            }
         }
-        
-        let walk = () =>{
-            const person1 = new Person('Javascript');
-            console.log(person1);
-            person1.setName('ReactJS');
-            console.log(person1.getName());
-        }
-        walk();
-        console.log('//////////////////////////////');
         class Programmer extends Person{
             constructor(name, programmer){
                 super(name);
@@ -40,15 +34,21 @@
             setProgrammingLanguage(programmer){
                 this.programmer=programmer;
             }
+            writeCode(){
+                document.write(`${this.name} is programming with ${this.programmer}`);
+            }
         }
-        let writeCode = () => {
-            const programmer = new Programmer('Hugo');
-            let personName = programmer.name;
-            programmer.setProgrammingLanguage('Java');
-            let programmingLanguage = programmer.getProgrammingLanguage();
-            console.log(`Programmer ${personName} - Programming language ${programmingLanguage}`);
-        }
-        writeCode();
+        let programmer = new Programmer();
+        programmer.setName('Hugo');
+        console.log(programmer);
+        let name = programmer.getName();
+        console.log(name);
+        programmer.walk();
+        programmer.setProgrammingLanguage('Java');
+        console.log(programmer);
+        let programingLanguage = programmer.getProgrammingLanguage();
+        console.log(programingLanguage);
+        programmer.writeCode();
     </script>
 </body>
 
